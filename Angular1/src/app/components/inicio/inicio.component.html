@@ -1,0 +1,17 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<h2>Vanis a probar el Angular </h2>
+<ul>
+  <li>
+    <h2>{{ nombre }}</h2>
+  </li>
+  <li>
+    <h2>{{ apellido }}</h2>
+  </li>
+</ul>
+
+<ul>
+    <li *ngFor="let avenger of avengers; let i = index">{{ i + 1 }} {{ avenger }}</li>
+</ul>
+
+<h1 *ngIf="false">webos</h1>
+<h1 *ngIf="true">webos2</h1>
