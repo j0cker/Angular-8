@@ -4,8 +4,7 @@ import { Component } from '@angular/core';
 //Decorador (declaración)
 @Component({
 selector: 'app-header', //cuando encuentre una etiqueta HTML del tipo my-app renderize lo que tenga el html de a continuación
-template: `<h1>Header component</h1>
-           <h2>Linea dos {{ name }}</h2>`
+templateUrl:  './header.component.html',
 })
 /*
 Aquí se declara la clase podemos agregar las variables que queramos, funciones, etc.
