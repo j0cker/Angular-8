@@ -12,13 +12,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { AboutComponent } from './components/about/about.component';
+import { PersonaComponent } from './components/persona/persona.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     InicioComponent,
-    AboutComponent
+    AboutComponent,
+    PersonaComponent
   ],
   imports: [
     BrowserModule,

@@ -3,4 +3,11 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
+
+  <ul>
+    <li *ngFor="let person of about; let i = index">
+      <a [routerLink]="['/persona',i]">{{ i + 1 }} {{ person.nombre }} {{ person.puesto }}</a>
+    </li>
+  </ul>
+  
 </div>
