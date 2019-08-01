@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AboutService, About } from '../../servicios/about.service';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-about',
@@ -12,7 +13,7 @@ export class AboutComponent implements OnInit {
     
   //private solo accesible en este componente
   //la variable es del tipo servicio.
-  constructor(private _aboutService:AboutService){
+  constructor(private _aboutService:AboutService, private router:Router){
     this.title = 'about';
   }
 
@@ -25,5 +26,11 @@ export class AboutComponent implements OnInit {
 
   }
 
+  verAbout(id:number){
+    console.log(id);
+
+    this.router.navigate( ['/persona', id] )
+
+  }
 
 }
