@@ -10,11 +10,20 @@ import { Router } from "@angular/router";
 export class AboutComponent implements OnInit {
   title:string = '';
   about:About[] = []; 
+  persona:About;
     
   //private solo accesible en este componente
   //la variable es del tipo servicio.
   constructor(private _aboutService:AboutService, private router:Router){
     this.title = 'about';
+
+    this.persona = {
+      nombre: "",
+      apellido: "",
+      puesto: ""
+    }
+
+
   }
 
   ngOnInit(){
@@ -30,6 +39,14 @@ export class AboutComponent implements OnInit {
     console.log(id);
 
     this.router.navigate( ['/persona', id] )
+
+  }
+
+  buscarPersona(personaSearch:string){
+
+    console.log(personaSearch);
+
+    this.persona = this._aboutService.getPersona(personaSearch);
 
   }
 

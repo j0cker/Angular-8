@@ -4,7 +4,25 @@
     Welcome to {{ title }}!
   </h1>
 
-  <ul>
+  <div>
+
+    <input class="form-control" placeholder="Buscar Persona" type="text" (keyup.enter)="buscarPersona(buscarPersonaText.value)" #buscarPersonaText>
+    <button (click)="buscarPersona(buscarPersonaText.value)" class="btn btn-primary">Buscar</button>
+
+    <div *ngIf="persona.nombre != ''">
+      {{ persona.nombre }} {{ persona.apellido }} {{ persona.puesto }}
+
+    </div>
+
+    <div *ngIf="persona.nombre == ''">
+      No hay resultados
+    </div>
+
+    
+
+  </div>
+
+  <ul style="margin-top: 50px;">
     <li *ngFor="let person of about; let i = index">
       <a [routerLink]="['/persona',i]">{{ i + 1 }} {{ person.nombre }} {{ person.puesto }}</a>
       <button (click)="verAbout(i)" class="btn btn-outline-primary">Click it!</button>

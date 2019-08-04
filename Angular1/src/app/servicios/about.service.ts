@@ -24,6 +24,31 @@ export class AboutService {
     getAbout():About[]{
       return this.about;
     }
+
+    //función paa obtener la variable about
+    getPersona(personaSearch:string):About {
+
+      console.log("Persona: " + personaSearch);
+      personaSearch = personaSearch.toLowerCase();
+
+      let personaArr:About;
+
+      personaArr = {
+        nombre: "",
+        apellido: "",
+        puesto: ""
+      }
+
+      for(let persona of this.about){
+        let nombre = persona.nombre.toLowerCase();
+        if(personaSearch.indexOf(nombre) >= 0 ){
+
+          personaArr = persona;
+        }
+      }
+
+      return personaArr;
+    }
 }
 
 //export para que también se pueda exportar
