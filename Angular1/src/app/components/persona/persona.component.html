@@ -1,1 +1,7 @@
-<p>persona works!</p>
+<p>persona works! {{ idPersona }}, {{ persona.nombre | uppercase }}, {{ persona.apellido }}, {{ persona.puesto }}, {{ persona.fechaAlta | date:'y' }}, {{persona.sueldo | currency}}</p>
+
+<a [routerLink]="['about']">Regresar</a>
+
+<div *ngIf="persona.nombre=='emiliano'">
+        Es emiliano    
+</div>

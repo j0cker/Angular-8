@@ -6,6 +6,7 @@ import { APP_ROUTING } from "./app.routes";
 
 //servicios
 import { AboutService } from './servicios/about.service';
+import { PersonaService } from './servicios/persona.service';
 
 //componentes
 import { AppComponent } from './app.component';
@@ -27,8 +28,8 @@ import { PersonaComponent } from './components/persona/persona.component';
     APP_ROUTING
   ],
   providers: [
-    AboutService
-  ],
+    AboutService,
+    PersonaService  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
