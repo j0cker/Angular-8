@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Router } from "@angular/router";
 
 @Component({
@@ -10,16 +10,24 @@ export class InputComponent implements OnInit {
 
   @Input() person: any = {};
   @Input() i:number;
+  @Output() personaSeleccionado: EventEmitter<number>;
 
-  constructor(private router:Router) { }
+  constructor(private router:Router) {
+
+    this.personaSeleccionado = new EventEmitter();
+
+  }
 
   ngOnInit() {
   }
 
   verAbout(i:number){
-    console.log(i);
+    
+    /* Input */
+    //console.log(i);
+    //this.router.navigate( ['/persona', i] )
 
-    this.router.navigate( ['/persona', i] )
+    this.personaSeleccionado.emit(this.i);
 
   }
 

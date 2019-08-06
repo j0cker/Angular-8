@@ -32,7 +32,7 @@
 
   <!-- con @input -->
   <ul style="margin-top: 50px;">
-    <app-input [i]="i" [person]="persona" *ngFor="let persona of about; let i = index"></app-input>
+    <app-input (personaSeleccionado)="verAbout($event);" [i]="i" [person]="persona" *ngFor="let persona of about; let i = index"></app-input>
   </ul>
 
   

@@ -36,7 +36,7 @@ export class AboutComponent implements OnInit {
   }
 
   verAbout(id:number){
-    console.log(id);
+    console.log("[AboutComponent]: " + id);
 
     this.router.navigate( ['/persona', id] )
 
