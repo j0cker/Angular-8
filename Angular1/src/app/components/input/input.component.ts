@@ -27,6 +27,7 @@ export class InputComponent implements OnInit {
     //console.log(i);
     //this.router.navigate( ['/persona', i] )
 
+    /* output */
     this.personaSeleccionado.emit(this.i);
 
   }

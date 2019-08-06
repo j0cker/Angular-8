@@ -30,7 +30,13 @@
     </li>
   </ul>
 
-  <!-- con @input -->
+  <!-- con @input 
+  <ul style="margin-top: 50px;">
+    <app-input [i]="i" [person]="persona" *ngFor="let persona of about; let i = index"></app-input>
+  </ul>
+  -->
+
+  <!-- con @output -->
   <ul style="margin-top: 50px;">
     <app-input (personaSeleccionado)="verAbout($event);" [i]="i" [person]="persona" *ngFor="let persona of about; let i = index"></app-input>
   </ul>
