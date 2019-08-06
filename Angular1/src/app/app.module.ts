@@ -14,6 +14,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { AboutComponent } from './components/about/about.component';
 import { PersonaComponent } from './components/persona/persona.component';
+import { InputComponent } from './components/input/input.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PersonaComponent } from './components/persona/persona.component';
     HeaderComponent,
     InicioComponent,
     AboutComponent,
-    PersonaComponent
+    PersonaComponent,
+    InputComponent
   ],
   imports: [
     BrowserModule,

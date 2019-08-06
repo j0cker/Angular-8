@@ -1,0 +1,4 @@
+<li>
+    <a [routerLink]="['/persona',i]">{{ i + 1 }} {{ person.nombre }} {{ person.puesto }}</a>
+    <button (click)="verAbout(i)" class="btn btn-outline-primary">Click it!</button>
+</li>

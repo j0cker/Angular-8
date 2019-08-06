@@ -22,11 +22,17 @@
 
   </div>
 
+  <!-- sin @input -->
   <ul style="margin-top: 50px;">
     <li *ngFor="let person of about; let i = index">
       <a [routerLink]="['/persona',i]">{{ i + 1 }} {{ person.nombre }} {{ person.puesto }}</a>
       <button (click)="verAbout(i)" class="btn btn-outline-primary">Click it!</button>
     </li>
+  </ul>
+
+  <!-- con @input -->
+  <ul style="margin-top: 50px;">
+    <app-input [i]="i" [person]="persona" *ngFor="let persona of about; let i = index"></app-input>
   </ul>
 
   
