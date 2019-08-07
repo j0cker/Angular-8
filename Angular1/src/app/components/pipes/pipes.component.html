@@ -1,0 +1,118 @@
+<table>
+
+    <tr>
+
+        <td style="width: 200px;">Variables</td>
+        <td style="width: 200px;">Pipe</td>
+        <td style="width: 200px;">Producto</td>
+
+    </tr>
+
+    <tr>
+
+        <td style="width: 200px;">{{ nombre }}</td>
+        <td style="width: 200px;">uppercase</td>
+        <td style="width: 200px;">{{ nombre | uppercase }}</td>
+
+    </tr>
+
+    <tr>
+
+        <td style="width: 200px;">{{ nombre }}</td>
+        <td style="width: 200px;">lowercase</td>
+        <td style="width: 200px;">{{ nombre | lowercase }}</td>
+
+    </tr>
+
+    <tr>
+
+        <td style="width: 200px;">{{ nombre }}</td>
+        <td style="width: 200px;">slice: 3</td>
+        <td style="width: 200px;">{{ nombre | slice:3 }}</td>
+
+    </tr>
+
+    <tr>
+
+        <td style="width: 200px;">{{ nombre }}</td>
+        <td style="width: 200px;">slice: 7:15</td>
+        <td style="width: 200px;">{{ nombre | slice:7:15 }}</td>
+
+    </tr>
+
+    <tr>
+
+        <td style="width: 200px;">{{ arreglo }}</td>
+        <td style="width: 200px;">slice: 3:5</td>
+        <td style="width: 200px;">{{ arreglo | slice:3:5 }}</td>
+
+    </tr>
+
+    <tr>
+
+        <td style="width: 200px;">{{ arreglo }}</td>
+        <td style="width: 200px;">slice: 3:5</td>
+        <td style="width: 200px;">{{ arreglo | slice:3:5 }}</td>
+
+    </tr>
+
+    <tr>
+
+        <td style="width: 200px;">{{ pi }}</td>
+        <td style="width: 200px;">number</td>
+        <td style="width: 200px;">{{ pi | number }}</td>
+
+    </tr>
+
+    <tr>
+
+        <td style="width: 200px;">{{ pi }}</td>
+        <td style="width: 200px;">number:'3.0-0' (3 enteros y de cero a cero decimales)</td>
+        <td style="width: 200px;">{{ pi | number:'3.0-0'}}</td>
+
+    </tr>
+
+    <tr>
+
+        <td style="width: 200px;">{{ pi }}</td>
+        <td style="width: 200px;">number:'1.0-2' (1 entero y de cero a 2 decimales)</td>
+        <td style="width: 200px;">{{ pi | number:'1.0-2'}}</td>
+
+    </tr>
+
+    <tr>
+
+        <td style="width: 200px;">{{ a }}</td>
+        <td style="width: 200px;">percent</td>
+        <td style="width: 200px;">{{ a | percent }}</td>
+
+    </tr>
+
+    <tr>
+
+        <td style="width: 200px;">{{ a }}</td>
+        <td style="width: 200px;">percent:'2.0-2' (2 enteros y de cero a 2 decimales)</td>
+        <td style="width: 200px;">{{ a | percent:'2.0-2' }}</td>
+
+    </tr>
+
+    <tr>
+
+        <td style="width: 200px;">{{ a }}</td>
+        <td style="width: 200px;">percent:'2.0-2' (2 enteros y de 2 a 2 decimales)</td>
+        <td style="width: 200px;">{{ a | percent:'2.2-2' }}</td>
+
+    </tr>
+
+</table>
+
+<table style="margin-top: 30px;">
+
+        <tr *ngFor="let item of arreglo | slice:1:20">
+    
+            <td style="width: 200px;">{{ item }}</td>
+    
+        </tr>
+
+
+</table>

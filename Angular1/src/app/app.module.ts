@@ -15,6 +15,7 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { AboutComponent } from './components/about/about.component';
 import { PersonaComponent } from './components/persona/persona.component';
 import { InputComponent } from './components/input/input.component';
+import { PipesComponent } from './components/pipes/pipes.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { InputComponent } from './components/input/input.component';
     InicioComponent,
     AboutComponent,
     PersonaComponent,
-    InputComponent
+    InputComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule,
