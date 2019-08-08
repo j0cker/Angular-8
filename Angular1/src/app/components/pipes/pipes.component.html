@@ -42,6 +42,14 @@
 
     <tr>
 
+        <td style="width: 200px;">{{ nombre2 }}</td>
+        <td style="width: 200px;"></td>
+        <td style="width: 200px;">{{ nombre2 | capitalizado:1:2:3:4:5 }}</td>
+
+    </tr>
+
+    <tr>
+
         <td style="width: 200px;">{{ arreglo }}</td>
         <td style="width: 200px;">slice: 3:5</td>
         <td style="width: 200px;">{{ arreglo | slice:3:5 }}</td>
@@ -104,6 +112,88 @@
 
     </tr>
 
+    <!-- ISO para currency https://es.wikipedia.org/wiki/ISO_4217-->
+
+    <tr>
+
+        <td style="width: 200px;">{{ salario }}</td>
+        <td style="width: 200px;">currency</td>
+        <td style="width: 200px;">{{ salario | currency }}</td>
+
+    </tr>
+
+    <tr>
+
+        <td style="width: 200px;">{{ salario }}</td>
+        <td style="width: 200px;">currency:'EUR'</td>
+        <td style="width: 200px;">{{ salario | currency:'EUR' }}</td>
+
+    </tr>
+
+    <tr>
+
+        <td style="width: 200px;">{{ salario }}</td>
+        <td style="width: 200px;">currency:'EUR'</td>
+        <td style="width: 200px;">{{ salario | currency:'EUR':false }}</td>
+
+    </tr>
+
+    <tr>
+
+        <td style="width: 200px;">{{ salario }}</td>
+        <td style="width: 200px;">currency:'EUR'</td>
+        <td style="width: 200px;">{{ salario | currency:'EUR':false:'4.0-2' }}</td>
+
+    </tr>
+
+    <tr>
+
+        <td style="width: 200px;">{{ salario }}</td>
+        <td style="width: 200px;">currency:'EUR'</td>
+        <td style="width: 200px;">{{ salario | currency:'EUR':false:'.4-4' }}</td>
+
+    </tr>
+
+    <tr>
+
+        <td style="width: 200px;">valorDePromesa</td>
+        <td style="width: 200px;">async</td>
+        <td style="width: 200px;">{{ valorDePromesa | async }}</td>
+
+    </tr>
+
+    <tr>
+
+        <td style="width: 200px;">{{ fecha }}</td>
+        <td style="width: 200px;">date</td>
+        <td style="width: 200px;">{{ fecha }}</td>
+
+    </tr>
+
+    <tr>
+
+        <td style="width: 200px;">{{ fecha }}</td>
+        <td style="width: 200px;">date:'medium'</td>
+        <td style="width: 200px;">{{ fecha | date:'medium' }}</td>
+
+    </tr>
+
+    <tr>
+
+        <td style="width: 200px;">{{ fecha }}</td>
+        <td style="width: 200px;">date:'dd - mm - YYYY'</td>
+        <td style="width: 200px;">{{ fecha | date:'dd - mm - yyyy' }}</td>
+
+    </tr>
+
+    <tr>
+
+        <td style="width: 200px;">{{ fecha }}</td>
+        <td style="width: 200px;">date:'dd - mm - YYYY'</td>
+        <td style="width: 200px;">{{ fecha | date:'MMMM - yyyy' }}</td>
+
+    </tr>
+
 </table>
 
 <table style="margin-top: 30px;">
@@ -113,6 +203,27 @@
             <td style="width: 200px;">{{ item }}</td>
     
         </tr>
+
+
+</table>
+
+<table style="margin-top: 30px;">
+
+    <tr>
+
+        <td style="width: 200px;">JSON</td>
+
+    </tr>
+
+    <tr>
+
+        <td style="width: 200px;">
+            <pre>
+                {{ persona | json }}
+            </pre>
+        </td>
+
+    </tr>
 
 
 </table>

@@ -1,6 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+/*pipes*/
+import { LOCALE_ID } from '@angular/core';
+import locale from '@angular/common/locales/es';
+import { registerLocaleData } from '@angular/common';
+registerLocaleData(locale);
+import { CapitalizadoPipe } from "./pipes/capitalizado.pipe";
+
 //rutas
 import { APP_ROUTING } from "./app.routes";
 
@@ -25,7 +32,8 @@ import { PipesComponent } from './components/pipes/pipes.component';
     AboutComponent,
     PersonaComponent,
     InputComponent,
-    PipesComponent
+    PipesComponent,
+    CapitalizadoPipe,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +41,9 @@ import { PipesComponent } from './components/pipes/pipes.component';
   ],
   providers: [
     AboutService,
-    PersonaService  ],
+    PersonaService,
+    { provide: LOCALE_ID, useValue: 'es' },  
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
