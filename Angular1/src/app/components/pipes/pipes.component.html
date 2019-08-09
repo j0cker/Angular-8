@@ -198,11 +198,11 @@
 
 <table style="margin-top: 30px;">
 
-        <tr *ngFor="let item of arreglo | slice:1:20">
-    
-            <td style="width: 200px;">{{ item }}</td>
-    
-        </tr>
+    <tr *ngFor="let item of arreglo | slice:1:20">
+
+        <td style="width: 200px;">{{ item }}</td>
+
+    </tr>
 
 
 </table>
@@ -222,6 +222,27 @@
                 {{ persona | json }}
             </pre>
         </td>
+
+    </tr>
+
+
+</table>
+
+<table style="margin-top: 30px;">
+
+    <tr>
+
+        <td style="width: 200px;">JSON</td>
+
+    </tr>
+
+    <tr>
+
+        <td style="width: 200px;">
+
+            <iframe width="560" height="315" [src]="video | domSeguro:'https://www.youtube.com/embed/'"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+            </td>
 
     </tr>
 

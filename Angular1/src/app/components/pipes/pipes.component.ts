@@ -36,6 +36,8 @@ export class PipesComponent implements OnInit {
 
   fecha = new Date();
 
+  video:string = "tCzyL0PgYhI";
+
   constructor() { }
 
   ngOnInit() {

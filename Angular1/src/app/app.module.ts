@@ -23,6 +23,7 @@ import { AboutComponent } from './components/about/about.component';
 import { PersonaComponent } from './components/persona/persona.component';
 import { InputComponent } from './components/input/input.component';
 import { PipesComponent } from './components/pipes/pipes.component';
+import { DomSeguroPipe } from './pipes/dom-seguro.pipe';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { PipesComponent } from './components/pipes/pipes.component';
     InputComponent,
     PipesComponent,
     CapitalizadoPipe,
+    DomSeguroPipe,
   ],
   imports: [
     BrowserModule,
