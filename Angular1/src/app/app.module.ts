@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { HttpClientModule } from "@angular/common/http";
+
 /*pipes*/
 import { LOCALE_ID } from '@angular/core';
 import locale from '@angular/common/locales/es';
@@ -14,6 +16,7 @@ import { APP_ROUTING } from "./app.routes";
 //servicios
 import { AboutService } from './servicios/about.service';
 import { PersonaService } from './servicios/persona.service';
+import { PaisesService } from './DAO/paises.service';
 
 //componentes
 import { AppComponent } from './app.component';
@@ -24,6 +27,7 @@ import { PersonaComponent } from './components/persona/persona.component';
 import { InputComponent } from './components/input/input.component';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { DomSeguroPipe } from './pipes/dom-seguro.pipe';
+import { HttpPaisesComponent } from './components/http-paises/http-paises.component';
 
 @NgModule({
   declarations: [
@@ -36,14 +40,17 @@ import { DomSeguroPipe } from './pipes/dom-seguro.pipe';
     PipesComponent,
     CapitalizadoPipe,
     DomSeguroPipe,
+    HttpPaisesComponent,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     APP_ROUTING
   ],
   providers: [
     AboutService,
     PersonaService,
+    PaisesService,
     { provide: LOCALE_ID, useValue: 'es' },  
   ],
   bootstrap: [AppComponent]
