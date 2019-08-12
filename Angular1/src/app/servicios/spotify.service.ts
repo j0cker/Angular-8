@@ -20,7 +20,7 @@ export class SpotifyService {
     const url = `https://api.spotify.com/v1/${ query }`;
 
     const headers = new HttpHeaders({
-      'Authorization': 'Bearer BQBCyzQcNT_0HWlmyv_t4cndSbJx33RM1j2q5MvvR-SN5O5CS32XS8NTKgEeJ8vPJkkATvN_Dt2U33m2cwU'
+      'Authorization': 'Bearer BQDC0MkXkL86_2kSurm6Z06eWv4VgMxqMPPCFZ61ofbWCab8fTyCr7ZPaDq66RjN5Jz7M1W3KLbo1WfEsrI'
     })
 
     return this.http.get(url, { headers });
@@ -29,7 +29,8 @@ export class SpotifyService {
 
    getReleases(){
 
-      return this.getQuery('browse/new-releases').pipe( map(data =>{
+      return this.getQuery('browse/new-releases')
+      .pipe( map(data =>{
         //data['albums'] porq si lo haces como data.albums el traductor va a pensar que es una variable decarada
         return data['albums'].items;
       }));

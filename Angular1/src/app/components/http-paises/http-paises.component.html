@@ -1,7 +1,7 @@
 <p>http-paises works!</p>
 
 <ul>
-    <li *ngFor="let pais of paises">
+    <li *ngFor="let pais of paises; let i = index">
         {{ pais.name }}, {{ pais.region }}
     </li>
 </ul>
