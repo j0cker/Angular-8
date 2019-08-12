@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 
+//injectable es para inyectarse en otros servicios es un tipo de decorador
 @Injectable()
 export class PaisesService {
 
@@ -12,17 +13,9 @@ export class PaisesService {
 
     }
 
-    getPaises() {
+    getPaises():any {
 
-      this.http.get(this.url).subscribe( (data:any):any => {
-
-        console.log(data);
-
-        this.paises = data;
-
-        return this.paises;
-
-      });
+      return this.http.get(this.url);
     }
 
 }

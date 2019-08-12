@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PaisesService } from "../../DAO/paises.service";
+import { SpotifyService } from "../../servicios/spotify.service";
 
 @Component({
   selector: 'app-http-paises',
@@ -13,13 +14,27 @@ export class HttpPaisesComponent implements OnInit {
 
   paisesService:PaisesService;
 
-  constructor(private _paisesService:PaisesService) {
+  constructor(private _paisesService:PaisesService, private _spotifyService:SpotifyService) {
 
     console.log("[HttpPaisesComponent][constructor]");
 
     //this.paisesService = _paisesService;
 
-    this.paises = this._paisesService.getPaises();
+    this.paises = this._paisesService.getPaises().subscribe( (data:any):any => {
+
+      console.log(data);
+
+      this.paises = data;
+
+      return this.paises;
+
+    });
+
+    this._spotifyService.getReleases().subscribe( (data:any):any => {
+        
+      console.log(data);
+
+    });
 
   }
 

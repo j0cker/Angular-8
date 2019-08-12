@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 
+//injectable es para inyectarse en otros servicios es un tipo de decorador
 @Injectable()
 export class AboutService {
     //no puede ser accesado fuera de la clase
