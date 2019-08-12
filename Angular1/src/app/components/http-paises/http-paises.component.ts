@@ -28,11 +28,15 @@ export class HttpPaisesComponent implements OnInit {
 
       return this.paises;
 
+    }, ( error ) => {
+
     });
 
     this._spotifyService.getReleases().subscribe( (data:any):any => {
         
       console.log(data);
+
+    }, ( error ) => {
 
     });
 
