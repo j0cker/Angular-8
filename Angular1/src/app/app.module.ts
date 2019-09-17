@@ -29,6 +29,9 @@ import { PipesComponent } from './components/pipes/pipes.component';
 import { DomSeguroPipe } from './pipes/dom-seguro.pipe';
 import { HttpPaisesComponent } from './components/http-paises/http-paises.component';
 
+//dependencias en general
+import { FormsModule } from '@angular/forms'; //para ngmodule
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +48,8 @@ import { HttpPaisesComponent } from './components/http-paises/http-paises.compon
   imports: [
     BrowserModule,
     HttpClientModule,
-    APP_ROUTING
+    APP_ROUTING,
+    FormsModule
   ],
   providers: [
     AboutService,
