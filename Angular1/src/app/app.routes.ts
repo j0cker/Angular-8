@@ -10,6 +10,8 @@ const APP_ROUTES: Routes = [
   { path: 'inicio', component: InicioComponent },
   { path: 'about', component: AboutComponent },
   { path: 'persona/:id', component: PersonaComponent },
+  //multiple parameters
+  //{ path: 'persona/:id/:id2:id3', component: PersonaComponent },
   { path: 'pipes', component: PipesComponent },
   { path: 'httpPaises', component: HttpPaisesComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'inicio' }

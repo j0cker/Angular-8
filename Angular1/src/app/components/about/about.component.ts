@@ -40,6 +40,9 @@ export class AboutComponent implements OnInit {
 
     this.router.navigate( ['/persona', id] )
 
+    //multiple parameters
+    //this.router.navigate( ['/persona', id, id2, id3] )
+
   }
 
   buscarPersona(personaSearch:string){
